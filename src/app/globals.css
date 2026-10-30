@@ -1,0 +1,65 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  --paper: #f7f6f2;
+  --surface: #ffffff;
+  --ink: #16150f;
+  --muted: #6e6b62;
+  --faint: #a19d92;
+  --line: #e4e1d8;
+  --accent: #b4532a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #12110e;
+    --surface: #1a1915;
+    --ink: #ece9e1;
+    --muted: #9a968b;
+    --faint: #66635b;
+    --line: #2b2924;
+    --accent: #e0855a;
+  }
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-instrument-serif);
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+::selection {
+  background: color-mix(in oklab, var(--accent) 22%, transparent);
+}
+
+@keyframes sweep {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(400%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-sweep {
+    animation: none;
+  }
+}
+
+.animate-sweep {
+  animation: sweep 1.4s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}

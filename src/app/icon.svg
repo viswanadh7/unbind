@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <style>
+    .page { stroke: #16150f; }
+    .hash { stroke: #b4532a; }
+    @media (prefers-color-scheme: dark) {
+      .page { stroke: #ece9e1; }
+      .hash { stroke: #e0855a; }
+    }
+  </style>
+  <path class="page" stroke-width="2" d="M7 3.5h12.5L25 9v19.5H7z" />
+  <path class="page" stroke-width="2" d="M19.5 3.5V9H25" />
+  <path class="hash" stroke-width="2" d="M14 14.5v9M18 14.5v9M11.5 17h9M11.5 21h9" />
+</svg>
